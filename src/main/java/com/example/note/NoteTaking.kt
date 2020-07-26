@@ -31,7 +31,7 @@ class NoteTaking : AppCompatActivity() {
             DataManager.LesNotes.add(InfoNote())
             NoteCourante = DataManager.LesNotes.lastIndex
         }
-    //test
+
         SaveNote.setOnClickListener {
             saveNote()
             startActivity(Intent(this,MainActivity::class.java))
