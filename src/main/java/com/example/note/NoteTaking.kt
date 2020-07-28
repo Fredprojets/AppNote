@@ -1,15 +1,12 @@
 package com.example.note
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
-import androidx.core.view.get
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_note_taking.*
-import org.jetbrains.annotations.Nullable
 
 class NoteTaking : AppCompatActivity() {
     private var NoteCourante = -1
@@ -114,8 +111,8 @@ class NoteTaking : AppCompatActivity() {
         note.contenu = Note.text.toString()
     }
 
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
         outState.putInt(NoteSelectionnee,NoteCourante)
     }
 
